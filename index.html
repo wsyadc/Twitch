@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../static-resources/all.css">
+<head>
+    <meta charset="UTF-8">
+    <title>hacker news</title>
+</head>
+<body>
+<p>frontpage</p>
+<p>详情请点击新闻标题</p>
+<p><a href="/submit">提交新闻</a></p>
+
+<% for(var i = 0; i < list.length ; i++) { %>     <!--起作用了，说明数据已经传入(因为循环了两次)。-->
+<span> <%= (i+1)%></span>
+<a href="/item?id=<%= list[i].id %>">
+
+
+<p>title</p>
+<p><%= list[i].title %></p>
+</a>
+<% } %>
+</body>
+</html>
